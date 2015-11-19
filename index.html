@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 	<title></title>
 
@@ -13,7 +13,29 @@
 
 
 </head>
-<body>
+<body ng-controller="myController">
+
+<div id="page-wrapper" class="container">
+
+	<div class="row">
+
+		<div id="header">
+			<div id="header-image" class="col-xs-4"><img src="images/trumptweets.jpg">
+			</div>
+			<div id="header-text" class="col-xs-8">
+			<h1>Trump Tweets</h1>
+			<h3>Hate Trump?
+			<button class="btn btn-primary" id="hate-trump-btn">Click here</h3>
+			</div>		
+		</div>
+
+	</div>
+	
+	<div ng-repeat="" class="trump-tweets">
+		
+	</div>
+	
+</div>
 
 </body>
 </html>
