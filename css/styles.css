@@ -14,20 +14,21 @@
 #header img {
   padding-top: 40px;
   padding-left: 40px;
+  width: 100%;
 }
-/* line 15, ../compass/sass/styles.scss */
+/* line 16, ../compass/sass/styles.scss */
 #header #header-text {
   color: white;
   margin-top: 35px;
 }
-/* line 19, ../compass/sass/styles.scss */
+/* line 20, ../compass/sass/styles.scss */
 #header h1 {
   font-size: 76px;
   font-family: fantasy;
   letter-spacing: 3px;
   text-align: center;
 }
-/* line 25, ../compass/sass/styles.scss */
+/* line 26, ../compass/sass/styles.scss */
 #header h3 {
   color: white;
   text-align: center;
