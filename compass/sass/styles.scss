@@ -45,7 +45,7 @@
 			.background-image{
 				background-size: cover;
 				height: 70vh;
-				opacity: 0.5;
+				opacity: 0.9;
 				background-position: 50% 50%;
 			}
 
@@ -57,12 +57,17 @@
 				top: 0px;
 				left: 20%;
 				opacity: 1.0;
+				background: transparent;
+				color: white;
 				h3{
-					color: white;
 					text-align: center;
 					font-size: 36px;
 					font-weight: bold;
 					opacity: 1.0;
+				}
+				#screenname{
+					margin-top: 10%;
+					font-size: 18px;
 				}
 			}
 		}
