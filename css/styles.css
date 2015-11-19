@@ -1,7 +1,7 @@
 /* line 2, ../compass/sass/styles.scss */
 #page-wrapper {
   padding: 0px;
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 /* line 6, ../compass/sass/styles.scss */
@@ -40,14 +40,37 @@
 }
 /* line 35, ../compass/sass/styles.scss */
 #page-wrapper .trump-tweets {
+  margin: 0px;
   width: 100%;
 }
-/* line 37, ../compass/sass/styles.scss */
+/* line 38, ../compass/sass/styles.scss */
 #page-wrapper .trump-tweets .tweets {
-  height: 70vh;
   margin: 0px;
+  width: 100%;
+  position: relative;
 }
-/* line 40, ../compass/sass/styles.scss */
-#page-wrapper .trump-tweets .tweets h3 {
+/* line 45, ../compass/sass/styles.scss */
+#page-wrapper .trump-tweets .tweets #background-image {
+  background-size: cover;
+  height: 70vh;
+  opacity: 0.5;
+  background-position: 50% 50%;
+}
+/* line 52, ../compass/sass/styles.scss */
+#page-wrapper .trump-tweets .tweets #quote {
+  padding-top: 20%;
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 1.0;
+}
+/* line 60, ../compass/sass/styles.scss */
+#page-wrapper .trump-tweets .tweets #quote h3 {
   color: white;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  opacity: 1.0;
 }

@@ -20,6 +20,12 @@ myApp.controller('myController', function ($scope, $http, $location){
 	var url='http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=%23trump';
 	$http.get(url).success(function(data){
 		$scope.data = data.statuses;
+		for(i=0; i<$scope.data.length;i++){
+			if ($scope.data[i].user.profile_banner_url == null){
+				$scope.data[i].user.profile_banner_url = "images/trumpbackground.jpg";
+			}
+			console.log($scope.data[i].user.profile_banner_url);
+		}
 		console.log($scope.data);
 	});
 

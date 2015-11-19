@@ -1,4 +1,7 @@
-<div ng-repeat="index in data" ng-style="{'background-image':'url({{index.user.profile_background_image_url}})'}" class="tweets">
-	<h3>{{index.text}}</h2>
-
+<div ng-repeat="index in data"  class="tweets">
+	<div id="background-image" ng-style="{'background-image':'url({{index.user.profile_banner_url}})'}">
+	</div>
+	<div id="quote">
+		<h3>{{index.text}}</h3>
+	</div>
 </div>
