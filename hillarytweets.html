@@ -1,1 +1,7 @@
-<h1>Hello World</h1>
+<div ng-repeat="index in data2"  class="tweets">
+	<div class="background-image" ng-style="{'background-image':'url({{index.user.profile_banner_url}})'}">
+	</div>
+	<div class="quote">
+		<h3>{{index.text}}</h3>
+	</div>
+</div>
