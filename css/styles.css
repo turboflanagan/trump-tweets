@@ -1,46 +1,53 @@
-/*
-Error: Invalid CSS after " // #8acaf7": expected "}", was ""
-        on line 63 of /Users/Stephen/Desktop/trump-tweets/compass/sass/styles.scss
-
-58: 			margin: 0px;
-59: 		}
-60: 	}
-61: }
-62: 
-63:  // #8acaf7
-
-Backtrace:
-/Users/Stephen/Desktop/trump-tweets/compass/sass/styles.scss:63
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:639:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:707:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:657:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:638:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:631:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:656:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:646:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \" // #8acaf7\": expected \"}\", was \"\"\A         on line 63 of /Users/Stephen/Desktop/trump-tweets/compass/sass/styles.scss\A \A 58: 			margin: 0px;\A 59: 		}\A 60: 	}\A 61: }\A 62: \A 63:  // #8acaf7"; }
+/* line 2, ../compass/sass/styles.scss */
+#page-wrapper {
+  padding: 0px;
+  width: 90%;
+  margin: auto;
+}
+/* line 6, ../compass/sass/styles.scss */
+#page-wrapper .row {
+  margin: 0px;
+}
+/* line 8, ../compass/sass/styles.scss */
+#page-wrapper .row #header {
+  padding: 0px;
+  background-color: #1c394e;
+  width: 100%;
+  height: 349px;
+}
+/* line 13, ../compass/sass/styles.scss */
+#page-wrapper .row #header img {
+  padding-top: 40px;
+  padding-left: 40px;
+}
+/* line 17, ../compass/sass/styles.scss */
+#page-wrapper .row #header #header-text {
+  color: white;
+  margin-top: 35px;
+}
+/* line 21, ../compass/sass/styles.scss */
+#page-wrapper .row #header h1 {
+  font-size: 76px;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  text-align: center;
+}
+/* line 27, ../compass/sass/styles.scss */
+#page-wrapper .row #header h3 {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+/* line 35, ../compass/sass/styles.scss */
+#page-wrapper .trump-tweets {
+  width: 100%;
+}
+/* line 37, ../compass/sass/styles.scss */
+#page-wrapper .trump-tweets .tweets {
+  height: 70vh;
+  margin: 0px;
+}
+/* line 40, ../compass/sass/styles.scss */
+#page-wrapper .trump-tweets .tweets h3 {
+  color: white;
+}
