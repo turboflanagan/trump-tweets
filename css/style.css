@@ -1,0 +1,120 @@
+/* line 6, ../compass/sass/style.scss */
+#container-wrapper #header {
+  width: 100%;
+  height: 125px;
+  background-color: #3a6b7f;
+  position: relative;
+  border-bottom: 3px solid silver;
+}
+/* line 15, ../compass/sass/style.scss */
+#container-wrapper #logo {
+  float: left;
+  position: relative;
+  margin: 15px 0 0 10%;
+  border-radius: 5px;
+}
+/* line 21, ../compass/sass/style.scss */
+#container-wrapper #logo #logo-text {
+  font-size: 20px;
+  margin: 1px 0 0 36px;
+}
+/* line 31, ../compass/sass/style.scss */
+#container-wrapper #dc {
+  color: orange;
+}
+/* line 37, ../compass/sass/style.scss */
+#container-wrapper #nav-bar-container {
+  width: 100%;
+  background-color: #132528;
+  height: 55px;
+  border-bottom: 3px solid silver;
+}
+/* line 43, ../compass/sass/style.scss */
+#container-wrapper #nav-bar-container #nav-bar {
+  float: right;
+  margin: 12px 30px 0 0;
+}
+/* line 54, ../compass/sass/style.scss */
+#container-wrapper .select-button {
+  float: left;
+  list-style-type: none;
+  margin: 5px;
+  border: 1px solid black;
+  padding: 3px 6px;
+  transition: background-color .25s;
+  color: silver;
+  background-color: #3a6b7f;
+}
+/* line 64, ../compass/sass/style.scss */
+#container-wrapper .select-button :hover {
+  color: black;
+  background-color: silver;
+  cursor: pointer;
+}
+/* line 79, ../compass/sass/style.scss */
+#container-wrapper .flex-caption {
+  width: 96%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  margin: auto;
+}
+/* line 93, ../compass/sass/style.scss */
+#container-wrapper #body-blocks {
+  margin: 30px;
+  overflow: hidden;
+}
+/* line 97, ../compass/sass/style.scss */
+#container-wrapper #body-blocks .heading {
+  border-bottom: 1px solid;
+  float: left;
+  width: 100%;
+}
+/* line 103, ../compass/sass/style.scss */
+#container-wrapper #body-blocks .topic-box {
+  width: 30%;
+  margin: 5px;
+  float: left;
+  height: 175px;
+}
+/* line 110, ../compass/sass/style.scss */
+#container-wrapper #body-blocks .topic-box .body-block-text {
+  width: 100%;
+}
+/* line 118, ../compass/sass/style.scss */
+#container-wrapper #blog-container {
+  margin: 30px;
+  width: 100%;
+}
+/* line 122, ../compass/sass/style.scss */
+#container-wrapper #blog-container #blot-header {
+  position: relative;
+}
+/* line 125, ../compass/sass/style.scss */
+#container-wrapper #blog-container #blog-submit-info {
+  background-color: #E9E9E9;
+  width: 94%;
+  border-radius: 3px;
+  padding-left: 10px;
+}
+/* line 131, ../compass/sass/style.scss */
+#container-wrapper #blog-container #blog-article-photo {
+  width: 94%;
+}
+/* line 134, ../compass/sass/style.scss */
+#container-wrapper #blog-container #blog-article-photo img {
+  width: 100%;
+  border: 3px solid;
+  max-height: 100px;
+}
+/* line 140, ../compass/sass/style.scss */
+#container-wrapper #blog-container #blog-body {
+  width: 85%;
+  margin-left: 10px;
+}
