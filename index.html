@@ -23,22 +23,22 @@
 		<div class="row">
 
 			<div id="header">
-				<div id="header-image" class="col-xs-4"><img src="images/trumptweets.jpg">
+				<div id="header-image" class="col-xs-4" ng-click="getTweets('trump', 'images/trumpbackground.jpg')"><img src="images/trumptweets.jpg">
 				</div>
 				<div id="header-text" class="col-xs-4">
 				<h1>Who do you love to hate?</h1>
 				<!-- <h3>?
 				<button class="btn btn-primary" id="hate-trump-btn" ng-click="getHillaryTweets()">Click here</button></h3>
  -->				</div>
-				<div id="right-header-image" ng-click="getHillaryTweets()" class="col-xs-4"><img src="images/hitlery.jpg">
+				<div id="right-header-image" ng-click="getTweets('hillary', 'images/hillarybackground.jpg')" class="col-xs-4"><img src="images/hitlery.jpg">
 				</div>		
 
 			</div>
 
 		</div>
 
-		<div id="more-tweets">
-			<a href="">Want more tweets?</a>
+		<div id="more-tweets" ng-click="updateTweets()">
+			<a href="">Check for more tweets?</a>
 		</div>
 			
 		

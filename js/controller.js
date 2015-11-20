@@ -21,6 +21,8 @@ $(document).ready(function(){
 var tweetSeconds;
 var timeDifference;
 var allData;
+var queryString = 'election2016';
+var imageUrl;
 
 var myApp = angular.module('myApp', ['ngRoute','ngCookies']);
 
@@ -41,7 +43,7 @@ myApp.config(function($routeProvider, $locationProvider){
 
 myApp.controller('myController', function ($scope, $http, $location, $interval){
 
-	var url='http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=%23trump';
+	var url='http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=%23election2016';
 	// var url is API address to get tweet info on trump.  
 	// The function below gets the JSON data from the API url above and returns an array object.
 	// for loop iterates through the data array to 1) get the user's profile banner that we set as the 
@@ -77,13 +79,13 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 
 
 	// Function to get profile banner and tweet time for hillarytweets.
-	$scope.getHillaryTweets = function(){
-		var url='http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=%23hillary';
+	$scope.getTweets = function(searchString, imageurl){
+		var url='http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=%23' + searchString;
 		$http.get(url).success(function(data2){
 			$scope.data2 = data2.statuses;
 			for(i=0; i<$scope.data2.length;i++){
 				if ($scope.data2[i].user.profile_banner_url == null){
-					$scope.data2[i].user.profile_banner_url = "images/hillarybackground.jpg";
+					$scope.data2[i].user.profile_banner_url = imageurl;
 				}
 				var time = $scope.data2[i].created_at;
 				var tweetTime = new Date(time);
@@ -101,9 +103,16 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 					$scope.data2[i].timeDifference = $scope.timeDifference;
 				};
 			},1000)	
-		$location.path('/hillarytweets');
-	});
+			$location.path('/hillarytweets');
+			queryString = searchString;
+			imageUrl = imageurl;
 
+		});
+	}
+	$scope.updateTweets = function(){
+		console.log(queryString);
+		console.log(imageUrl);
+		$scope.getTweets(queryString, imageUrl);
 	}
 
 });
