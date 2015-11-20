@@ -34,18 +34,24 @@
 	}
 
 	#more-tweets{
-				background-color: #55acee;
-				height: 50px;
-				width: 100%;
-				text-align: center;
-				a{
-					line-height: 50px;
-					color: white;
-					font-size: 18px;
-				}
-			}
+		background-color: #55acee;
+		height: 50px;
+		width: 100%;
+		text-align: center;
+		a{
+			line-height: 50px;
+			color: white;
+			font-size: 18px;
+		}
+	}
 
-	.trump-tweets{
+	#more-tweets.navbar-scrolled{
+		position: fixed;
+		z-index: 100;
+		margin-top: -349px;
+	}
+
+	#trump-tweets{
 		margin: 0px;
 		width: 100%;
 		font-family: 'Inconsolata', sans-serif;
@@ -80,5 +86,9 @@
 				}
 			}
 		}
+	}
+
+	.margin-adjust{
+		margin-top: 50px!important;
 	}
 }

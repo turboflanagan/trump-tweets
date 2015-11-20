@@ -1,3 +1,33 @@
+
+$(document).ready(function(){
+	var mainNav = $('#more-tweets');
+	var mainNavScroll = 'navbar-scrolled';
+	var headerHeight = $('#header').height();
+
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > headerHeight){
+			mainNav.addClass(mainNavScroll);
+			$('#trump-tweets').addClass('margin-adjust');
+
+		}else{
+			mainNav.removeClass(mainNavScroll);
+			$('#trump-tweets').removeClass('margin-adjust');
+		}
+	});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
 var tweetSeconds;
 var timeDifference;
 var allData;
