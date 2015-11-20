@@ -28,16 +28,29 @@
 				color: white;
 				text-align: left;
 				margin-top: 50px;
-
 			}
+
 		}
 	}
+
+	#more-tweets{
+				background-color: #55acee;
+				height: 50px;
+				width: 100%;
+				text-align: center;
+				a{
+					line-height: 50px;
+					color: white;
+					font-size: 18px;
+				}
+			}
 
 	.trump-tweets{
 		margin: 0px;
 		width: 100%;
 		font-family: 'Inconsolata', sans-serif;
 		letter-spacing: 2px;
+
 		.tweets{
 			margin: 0px;
 			width: 100%;

@@ -5,16 +5,16 @@ var allData;
 var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function($routeProvider, $locationProvider){
-	$routeProvider.when('/', {
+	$routeProvider.when('/', {    // When '/' is the end of the url, the default trumptweets page is displayed.
 		templateUrl: 'trumptweets.html',
 		controller: 'myController'
 	}).
-	when('/hillarytweets',{
+	when('/hillarytweets',{      // When '/hillarytweets' ends the url string, hillarytweets page is displayed.
 		templateUrl: 'hillarytweets.html',
 		controller: 'myController'
 	}).
 	otherwise({
-		redirectTo: 'trumptweets.html'
+		redirectTo: 'trumptweets.html'    // --default page to display.
 	});
 
 });
@@ -22,6 +22,11 @@ myApp.config(function($routeProvider, $locationProvider){
 myApp.controller('myController', function ($scope, $http, $location, $interval){
 
 	var url='http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=%23trump';
+	// var url is API address to get tweet info on trump.  
+	// The function below gets the JSON data from the API url above and returns an array object.
+	// for loop iterates through the data array to 1) get the user's profile banner that we set as the 
+	// background image on the trumptweets page.  And 2) get the time the tweet was made.  This is used 
+	// to make a timer indicating the interval of time passed since tweet was made.
 	$http.get(url).success(function(data){
 		$scope.data = data.statuses;
 		for(i=0; i<$scope.data.length;i++){
@@ -34,6 +39,9 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 			$scope.data[i].tweetSeconds = tweetSeconds;
 
 		}	
+
+		// subtracts the tweet time in seconds from the current time in seconds to set the timer to how many seconds have passed since tweet was made
+
 		console.log($scope.data);
 		$interval(function(){
 			for(i=0; i < $scope.data.length; i++){
@@ -48,7 +56,7 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 	});
 
 
-
+	// Function to get profile banner and tweet time for hillarytweets.
 	$scope.getHillaryTweets = function(){
 		var url='http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=%23hillary';
 		$http.get(url).success(function(data2){
@@ -63,6 +71,8 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 				$scope.data2[i].tweetSeconds = tweetSeconds;
 
 			}
+
+			// setting the counter for how long ago tweet was made.
 			$interval(function(){
 				for(i=0; i < $scope.data2.length; i++){
 					var currentTime = new Date();
