@@ -18,21 +18,11 @@ $(document).ready(function(){
 });
 
 
-
-
-
-
-
-
-
-
-
-
 var tweetSeconds;
 var timeDifference;
 var allData;
 
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute','ngCookies']);
 
 myApp.config(function($routeProvider, $locationProvider){
 	$routeProvider.when('/', {    // When '/' is the end of the url, the default trumptweets page is displayed.
@@ -117,3 +107,12 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 	}
 
 });
+
+
+myApp.controller('cookieController', ['$scope', '$cookies', '$cookieStore', '$window', function($scope, $cookies, $cookieStore, $window) {
+	$cookies.userName = 'Sandeep'; 
+	$scope.platformCookie = $cookies.userName; 
+	$cookieStore.put('fruit', 'Apple'); 
+	$cookieStore.put('flower', 'Rose'); 
+	$scope.myFruit = $cookieStore.get('fruit');
+}]);
