@@ -1,24 +1,25 @@
-/* line 2, ../compass/sass/styles.scss */
+/* line 1, ../compass/sass/styles.scss */
 #page-wrapper {
   padding: 0px;
   width: 100%;
   margin: auto;
 }
-/* line 6, ../compass/sass/styles.scss */
+/* line 5, ../compass/sass/styles.scss */
 #page-wrapper .row {
   margin: 0px;
 }
-/* line 8, ../compass/sass/styles.scss */
+/* line 7, ../compass/sass/styles.scss */
 #page-wrapper .row #header {
   padding: 0px;
   background-color: #1c394e;
   width: 100%;
   height: 349px;
 }
-/* line 13, ../compass/sass/styles.scss */
+/* line 12, ../compass/sass/styles.scss */
 #page-wrapper .row #header img {
   padding-top: 40px;
   padding-left: 40px;
+  max-width: 100%;
 }
 /* line 17, ../compass/sass/styles.scss */
 #page-wrapper .row #header #header-text {
@@ -30,20 +31,22 @@
   font-size: 76px;
   font-family: fantasy;
   letter-spacing: 3px;
-  text-align: center;
+  text-align: left;
 }
 /* line 27, ../compass/sass/styles.scss */
 #page-wrapper .row #header h3 {
   color: white;
-  text-align: center;
+  text-align: left;
   margin-top: 50px;
 }
-/* line 35, ../compass/sass/styles.scss */
+/* line 36, ../compass/sass/styles.scss */
 #page-wrapper .trump-tweets {
   margin: 0px;
   width: 100%;
+  font-family: 'Inconsolata', sans-serif;
+  letter-spacing: 2px;
 }
-/* line 38, ../compass/sass/styles.scss */
+/* line 41, ../compass/sass/styles.scss */
 #page-wrapper .trump-tweets .tweets {
   margin: 0px;
   width: 100%;
@@ -53,30 +56,26 @@
 #page-wrapper .trump-tweets .tweets .background-image {
   background-size: cover;
   height: 70vh;
-  opacity: 0.9;
   background-position: 50% 50%;
 }
-/* line 52, ../compass/sass/styles.scss */
+/* line 51, ../compass/sass/styles.scss */
 #page-wrapper .trump-tweets .tweets .quote {
-  padding-top: 20%;
   width: 60%;
+  height: 60%;
   margin: auto;
   position: absolute;
-  top: 0px;
-  left: 20%;
-  opacity: 1.0;
-  background: transparent;
+  top: 25%;
+  left: 10%;
   color: white;
 }
-/* line 62, ../compass/sass/styles.scss */
+/* line 59, ../compass/sass/styles.scss */
 #page-wrapper .trump-tweets .tweets .quote h3 {
-  text-align: center;
+  text-align: left;
   font-size: 36px;
   font-weight: bold;
-  opacity: 1.0;
 }
-/* line 68, ../compass/sass/styles.scss */
-#page-wrapper .trump-tweets .tweets .quote #screenname {
+/* line 64, ../compass/sass/styles.scss */
+#page-wrapper .trump-tweets .tweets .quote .screenname {
   margin-top: 10%;
   font-size: 18px;
 }

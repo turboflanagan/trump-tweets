@@ -1,8 +1,11 @@
 <div ng-repeat="index in data"  class="tweets">
-	<div class="background-image" ng-style="{'background-image':'url({{index.user.profile_banner_url}})'}">
-	</div>
-	<div class="quote">
-		<h3>{{index.text}}</h3>
-		<p id="screenname">{{index.user.screen_name}}</p>
+	<div class="background-image" ng-style="{'background-image':'linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url({{index.user.profile_banner_url}})'}">
+		<div class="quote"><h3>{{index.text}}</h3>
+			<p class="screenname">{{index.user.screen_name}} - {{index.timeDifference}}s ago</p>
+			
+		</div>
 	</div>
 </div>
+
+
+
