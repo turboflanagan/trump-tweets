@@ -22,9 +22,9 @@ var tweetSeconds;
 var timeDifference;
 var allData;
 var queryString = 'election2016';
-var imageUrl;
+var imageUrl = 'images/republicansdemocrats.jpg;'
 
-var myApp = angular.module('myApp', ['ngRoute','ngCookies']);
+var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(function($routeProvider, $locationProvider){
 	$routeProvider.when('/', {    // When '/' is the end of the url, the default trumptweets page is displayed.
@@ -53,7 +53,7 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 		$scope.data = data.statuses;
 		for(i=0; i<$scope.data.length;i++){
 			if ($scope.data[i].user.profile_banner_url == null){
-				$scope.data[i].user.profile_banner_url = "images/trumpbackground.jpg";
+				$scope.data[i].user.profile_banner_url = "images/republicansdemocrats.jpg";
 			}
 			var time = $scope.data[i].created_at;
 			var tweetTime = new Date(time);
