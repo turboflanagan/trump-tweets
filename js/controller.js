@@ -102,7 +102,27 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 					$scope.timeDifference = parseInt(currentTimeInSeconds - $scope.data2[i].tweetSeconds);
 					$scope.data2[i].timeDifference = $scope.timeDifference;
 				};
-			},1000)	
+
+			},1000);
+
+			//Code to check for new tweets.  Unfortunately checking every second
+			//will cause twitter to block access to the data.  Trying to check every
+			//15 seconds to see if it helps.
+
+			$interval (function(){
+				$http.get(url).success(function(data3){
+					$scope.data3 = data3.statuses;
+					for(i=0; i<$scope.data2.length; i++){
+						if($scope.data2[0].id == $scope.data3[i].id){
+							$scope.counter = i;
+							if($scope.counter > 0){
+								$scope.countMessage = ' ' + $scope.counter + ' new tweets to read!';	
+							}
+						};
+					};
+					
+				});
+			},15000);
 			$location.path('/hillarytweets');
 			queryString = searchString;
 			imageUrl = imageurl;
@@ -118,10 +138,4 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 });
 
 
-myApp.controller('cookieController', ['$scope', '$cookies', '$cookieStore', '$window', function($scope, $cookies, $cookieStore, $window) {
-	$cookies.userName = 'Sandeep'; 
-	$scope.platformCookie = $cookies.userName; 
-	$cookieStore.put('fruit', 'Apple'); 
-	$cookieStore.put('flower', 'Rose'); 
-	$scope.myFruit = $cookieStore.get('fruit');
-}]);
+
