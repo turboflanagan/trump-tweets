@@ -115,14 +115,17 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 					for(i=0; i<$scope.data2.length; i++){
 						if($scope.data2[0].id == $scope.data3[i].id){
 							$scope.counter = i;
-							if($scope.counter > 0){
+							if($scope.counter > 1){
 								$scope.countMessage = ' ' + $scope.counter + ' new tweets to read!';	
+							}else if($scope.counter == 1){
+								$scope.countMessage = ' ' + $scope.counter + ' new tweet to read!';
 							}
 						};
 					};
 					
 				});
 			},15000);
+
 			$location.path('/hillarytweets');
 			queryString = searchString;
 			imageUrl = imageurl;
@@ -130,8 +133,7 @@ myApp.controller('myController', function ($scope, $http, $location, $interval){
 		});
 	}
 	$scope.updateTweets = function(){
-		console.log(queryString);
-		console.log(imageUrl);
+		$scope.countMessage = '';
 		$scope.getTweets(queryString, imageUrl);
 	}
 
